@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Usuarios</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -65,10 +65,11 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>
 						</th>
+						<th>Id</th>
 						<th>Nombre</th>
 						<th>Correo</th>
-						<th>Telefono</th>
-						<th>Tipo trabajo</th>
+						<th>Contraseña</th>
+						<th>Tipo_id</th>
 						<th>Acciones</th>
 					</tr>
 				</thead>
@@ -80,10 +81,11 @@ $(document).ready(function(){
 								<label for="checkbox1"></label>
 							</span>
 						</td>
+						<td>8017745</td>
 						<td>Edwin Garcia</td>
 						<td>egarcia@gmail.com</td>
-						<td>(+57) 3215455451</td>
-						<td>Product Owner</td>
+						<td>#$45$$%5"@4</td>
+						<td>Cedula</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -96,10 +98,11 @@ $(document).ready(function(){
 								<label for="checkbox2"></label>
 							</span>
 						</td>
+						<td>884544845</td>
 						<td>Alejandro Tovar</td>
 						<td>atovar@hotmail.com</td>
-						<td>(+57) 3225455451</td>
-						<td>Scrum Master</td>
+						<td>896%$$&8090</td>
+						<td>Cedula</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -112,10 +115,11 @@ $(document).ready(function(){
 								<label for="checkbox3"></label>
 							</span>
 						</td>
+						<td>894854656</td>
 						<td>William Alfonso </td>
 						<td>walfonso@gmail.com</td>
-						<td>(+57) 3225455450</td>
-						<td>Desarrollador</td>
+						<td>&&/565r67578(#$%6(76</td>
+						<td>Cedula</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -128,10 +132,11 @@ $(document).ready(function(){
 								<label for="checkbox4"></label>
 							</span>
 						</td>
+						<td>84895687</td>
 						<td>Heyler Guzman</td>
 						<td>hguzman@mail.com</td>
-						<td>(+57) 3225455450</td>
-						<td>Desarrollador</td>
+						<td>%&%&75646776$#</td>
+						<td>Cedula</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -144,10 +149,11 @@ $(document).ready(function(){
 								<label for="checkbox5"></label>
 							</span>
 						</td>
+						<td>10236548996</td>
 						<td>Jackeline Jaimes</td>
 						<td>jjaimes@gmail.com</td>
-						<td>(+57) 3205455450</td>
-						<td>Desarrollador</td>
+						<td>89&%6543$%&%$0</td>
+						<td>Cedula</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -168,22 +174,31 @@ $(document).ready(function(){
 					<h4 class="modal-title">Agregar usuario</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">	
+				<div class="modal-body">
+					<div class="form-group">
+						<label>Identificacion</label>
+						<input type="number" class="form-control" required>
+					</div>	
 					<div class="form-group">
 						<label>Nombre</label>
-						<input type="text" class="form-control" required>
+						<input name="name" type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Correo</label>
-						<input type="text" class="form-control" required>
+						<input name="correo" type="email" class="form-control" required>
 					</div>	
 					<div class="form-group">
-						<label>Telefono</label>
-						<input type="text" class="form-control" required>
+						<label>Contraseña</label>
+						<input name="contrasena" type="password" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Tipo de trabajo</label>
-						<input type="email" class="form-control" required>
+						<label>Tipo Documento</label></br>
+						<select class="form-group">
+							<option selected="">Seleccione Categoria</option>
+							<option>Cedula </option>
+							<option>Pasaporte</option>
+							<option>Cedula extranjeria</option>
+						</select>						
 					</div>
 									
 				</div>
@@ -205,19 +220,31 @@ $(document).ready(function(){
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
-					<div class="form-group">
-						<label>Nombre</label>
-						<input type="text" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label>Correo</label>
-						<input type="email" class="form-control" required>
-					</div>
-					
-					<div class="form-group">
-						<label>Telefono</label>
-						<input type="text" class="form-control" required>
-					</div>	
+						<div class="form-group">
+							<label>Identificacion</label>
+							<input type="number" class="form-control" required>
+						</div>	
+						<div class="form-group">
+							<label>Nombre</label>
+							<input name="name" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Correo</label>
+							<input name="correo" type="email" class="form-control" required>
+						</div>	
+						<div class="form-group">
+							<label>Contraseña</label>
+							<input name="contrasena" type="password" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Tipo Documento</label></br>
+							<select class="form-group">
+								<option selected="">Seleccione Categoria</option>
+								<option>Cedula </option>
+								<option>Pasaporte</option>
+								<option>Cedula extranjeria</option>
+								</select>						
+						</div>
 										
 				</div>
 				<div class="modal-footer">

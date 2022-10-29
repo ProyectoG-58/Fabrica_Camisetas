@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Categorias</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -48,7 +48,7 @@ $(document).ready(function(){
 				<div class="row">
 					<div class="col-sm-6">
                         <br>
-						<h2>Categorias</h2>
+						<h2>Registro Categorias</h2>
                         <br>
 					</div>
 					<div class="col-sm-6">
@@ -69,7 +69,7 @@ $(document).ready(function(){
 						</th>
 						<th scope="col2">id</th>
 						<th scope="col3">Nombre</th>
-						<th>Acciones</th>
+                        <th>Acciones</th>
 
 					</tr>
 				</thead>
@@ -151,11 +151,11 @@ $(document).ready(function(){
 				<div class="modal-body">	
 					<div class="form-group">
 						<label>Id</label>
-						<input type="text" class="form-control" required>
+						<input name="id" type="number" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Nombre</label>
-						<input type="text" class="form-control" required>
+						<input name="nombre" type="text" class="form-control" required>
 					</div>				
 				</div>
 				<div class="modal-footer">
@@ -178,11 +178,11 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Id</label>
-						<input type="text" class="form-control" required>
+						<input name="id" type="number" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Nombre</label>
-						<input type="email" class="form-control" required>
+						<input name="nombre" type="text" class="form-control" required>
 					</div>			
 				</div>
 				<div class="modal-footer">

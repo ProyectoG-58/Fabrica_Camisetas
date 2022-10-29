@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Productos</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,6 +39,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+</br></br></br>
 <div class="container-xl">
 	<div class="table-responsive">
 		<div class="table-wrapper">
@@ -46,7 +47,7 @@ $(document).ready(function(){
 				<div class="row">
 					<div class="col-sm-6">
                         <br>
-						<h2>Productos</h2>
+						<h2>Registro Productos</h2>
                         <br>
 					</div>
 					<div class="col-sm-6">
@@ -56,6 +57,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 			</div>
+		
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
@@ -65,11 +67,12 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>
 						</th>
-						<th>Referencia</th>
-						<th>Cantidad</th>
+						<th>Id</th>
 						<th>Nombre</th>
-						<th>Descripcion</th>
 						<th>Precio</th>
+						<th>Categoria</th>
+						<th>Estado</th>
+						<th>Accion</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -81,10 +84,11 @@ $(document).ready(function(){
 							</span>
 						</td>
 						<td>001</td>
-						<td>2</td>
-						<td>Basica</td>
-						<td>Camiseta sisa, elaborada en algodon y poliester</td>
+						<td>Camiseta sisa</td>
 						<td>$25.000</td>
+						<td>elaborada en algodon y poliester</td>
+						<td>Activo</td>
+						
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -98,10 +102,12 @@ $(document).ready(function(){
 							</span>
 						</td>
 						<td>002</td>
-						<td>1</td>
-						<td>Manga larga</td>
-						<td>Camiseta manga larga, elaborada en algodon</td>
+						<td>Camiseta manga larga</td>
 						<td>$37.000</td>
+						<td>Elaborada en algodon</td>
+						<td>Activo</td>
+
+
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -115,10 +121,10 @@ $(document).ready(function(){
 							</span>
 						</td>
 						<td>003</td>
-						<td>4</td>
-						<td>Cuello tortuga</td>
-						<td>Camisa de tejido acanalado, elaborada en poliester</td>
+						<td>Camisa de tejido acanalado</td>
 						<td>$45.000</td>
+						<td>Elaborada en poliester</td>
+						<td>Activo</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -132,10 +138,10 @@ $(document).ready(function(){
 							</span>
 						</td>
 						<td>004</td>
-						<td>2</td>
-						<td>Estampada</td>
-						<td>Camisa playera, elaborada en lino</td>
+						<td>Camisa playera</td>
 						<td>$57.000</td>
+						<td>elaborada en lino</td>
+						<td>Activo</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -149,10 +155,11 @@ $(document).ready(function(){
 							</span>
 						</td>
 						<td>005</td>
-						<td>7</td>
-						<td>Mensajes</td>
-						<td>Camisa con mensajes celebres, elaborada en algodon</td>
+						<td>Camisa con mensajes celebres</td>
 						<td>$50.000</td>
+						<td>elaborada en algodon</td>
+						<td>Activa</td>
+
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -175,25 +182,36 @@ $(document).ready(function(){
 				</div>
 				<div class="modal-body">	
 					<div class="form-group">
-						<label>Referencia</label>
-						<input type="text" class="form-control" required>
+						<label>ID</label>
+						<input name="id" type="number" class="form-control" required>
 					</div>
-					<div class="form-group">
-						<label>Cantidad</label>
-						<input type="text" class="form-control" required>
-					</div>	
 					<div class="form-group">
 						<label>Nombre</label>
-						<input type="text" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label>Descripcion</label>
-						<input type="email" class="form-control" required>
-					</div>
+						<input name="nombre"  type="text" class="form-control" required>
+					</div>	
 					<div class="form-group">
 						<label>Precio</label>
-						<input type="text" class="form-control" required>
-					</div>					
+						<input name="precio" type="number" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Categoria</label></br>
+						<select class="form-group">
+							<option selected="">Seleccione Categoria</option>
+							<option>Elaborada en algodon 50% y poliester 50% </option>
+							<option>Elaborada en algodon</option>
+							<option>Elaborada en poliester</option>
+							<option>Elaborada en lino</option>
+							</select>						
+					</div>
+
+					<div class="form-group">
+						<label>Estado</label></br>
+						<select class="form-group">
+							<option selected="">Seleccione Estado</option>
+							<option>Activo</option>
+							<option>Inactivo</option>
+							</select>						
+					</div>		
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -212,27 +230,37 @@ $(document).ready(function(){
 					<h4 class="modal-title">Editar producto</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">	
 					<div class="form-group">
-						<label>Referencia</label>
-						<input type="text" class="form-control" required>
+						<label>ID</label>
+						<input name="id" type="number" class="form-control" required>
 					</div>
-					<div class="form-group">
-						<label>Cantidad</label>
-						<input type="email" class="form-control" required>
-					</div>
-					
 					<div class="form-group">
 						<label>Nombre</label>
-						<input type="text" class="form-control" required>
+						<input name="nombre"  type="text" class="form-control" required>
 					</div>	
 					<div class="form-group">
-						<label>Descripcion</label>
-						<input type="text" class="form-control" required>
+						<label>Precio</label>
+						<input name="precio" type="number" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Precio</label>
-						<input type="text" class="form-control" required>
+						<label>Categoria</label></br>
+						<select class="form-group">
+							<option selected="">Seleccione Categoria</option>
+							<option>Elaborada en algodon 50% y poliester 50% </option>
+							<option>Elaborada en algodon</option>
+							<option>Elaborada en poliester</option>
+							<option>Elaborada en lino</option>
+							</select>						
+					</div>
+
+					<div class="form-group">
+						<label>Estado</label></br>
+						<select class="form-group">
+							<option selected="">Seleccione Estado</option>
+							<option>Activo</option>
+							<option>Inactivo</option>
+							</select>						
 					</div>						
 				</div>
 				<div class="modal-footer">
